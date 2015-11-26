@@ -1,18 +1,18 @@
-Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*"
+Config { font = "-*-terminus-*-*-*-*-22-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = TopW L 96
-       , commands = [ Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+       , position = TopW L 97
+       , commands = [ Run Wireless "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                     , Run Cpu ["-t", "Cpu: <total>%", "-L","15","-H","50","--normal","#C9F2C9","--high","#FB7676","--low","#4E4EF8"] 10
                     , Run Memory ["-t", "Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Date "%a %b %_d %H:%M:%S" "date" 10
---		    , Run Battery ["-t","Batt: <left>%"] 10
- 		    , Run BatteryP ["BAT0"] ["-t", "<left>% ", "--", "-c", "energy_full"] 10
-                    , Run CpuFreq ["-t", "Freq: <cpu0>|<cpu1>", "-L", "0", "-H", "2", "-l","#6EF96E", "-n","#4E4EF8", "-h","#FB7676"] 10
+		    , Run Battery ["-t","<left>%"] 10
+--		    , Run BatteryP ["BAT0"] ["-t", "<left> ", "--", "-c", "energy_full"] 10
+                  , Run CpuFreq ["-t", "Freq: <cpu0>|<cpu1>", "-L", "0", "-H", "2", "-l","#6EF96E", "-n","#4E4EF8", "-h","#FB7676"] 10
 		    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% :: %cpufreq% :: %memory% * %swap% :: %wlan0% :: <fc=#F9D961> %date% </fc> :: <fc=#9958DB> %battery% </fc>"
+       , template = "%StdinReader% }{ %cpu% :: %cpufreq% :: %memory% * %swap% :: %wlan0wi% :: <fc=#F9D961> %date% </fc> :: <fc=#9958DB> %battery% </fc>"
        }

@@ -55,7 +55,8 @@
 URxvt*termName:             rxvt-unicode-256color
 URxvt*geometry:             90x25
 URxvt*reverseVideo:         false
-URxvt*font:                 xft:Inconsolata:size=10
+URxvt*font:                 xft:Inconsolata:size=18
+#URxvt*font:                 xft:Inconsolata:size=20
 URxvt*letterSpace:          -1
 URxvt*scrollBar:            false
 URxvt*scrollBar_floating:   true
@@ -63,6 +64,5 @@ URxvt*scrollBar_right:      false
 URxvt*scrollColor:          #0c0c0c
 URxvt*saveLines:            5500
 URxvt.perl-ext-common:      default,matcher,-searchable-scrollback
-URxvt.urlLauncher:          firefox
 URxvt.matcher.button:       1
 URxvt*colorUL:              yellow
